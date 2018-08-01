@@ -3,9 +3,18 @@ Feature: Test create order
     I want to be able to test if order created successfully
 
     Background:
-        Given I open the site "/Skechers-Skech-Air-Element-Womens-Training-Shoes-Sky-Blue-000000020317.do?cno=000000010301&mlc=0001"
+    	Given I open the site "/login/loginForm.do"
+        When  I set "abdurrasyid.mujahid@indolotte.com" to the inputfield "#userid"
+        And   I set "pass#12345" to the inputfield "#tab_cont01 #password"
+        And   I click on the button "#quick .btn_close"
+        And   I click on the button "#btnLogin"
+        Then  I wait on element "#btnLogin" to not exist
+        And   I expect that the path is "/"
 
     Scenario: Test if element responds to button press
-        Given there is an element "#buyNowButton" on the page
-        When  I click on the button "#buyNowButton"
-        Then  I expect that a alertbox is opened
+        Given I open the site "/Skechers-Skech-Air-Element-Womens-Training-Shoes-Sky-Blue-000000020317.do?cno=000000010301&mlc=0001"
+        And   there is an element "#buyNowButton" on the page
+        When  I click on the element ".size_box[data-optval='US 9']"
+        And   I click on the button "#buyNowButton"
+        Then  I wait on element "#buyNowButton" to not exist
+        And   I expect that the path is "/op/generalParcel/view.do"
