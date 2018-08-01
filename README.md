@@ -211,6 +211,7 @@ Check out all predefined snippets. You can see how they get used in [`sampleSnip
 - `the (button|element) "([^"]*)?"( not)* contains any text` <br>Check if a element does not contain any text
 - `the (button|element) "([^"]*)?" is( not)* empty` <br>Check if a element is empty
 - `the page url is( not)* "([^"]*)?"` <br>Check the url of the current browser window/tab
+- `the path is( not)* "([^"]*)?"` <br>Check if the path of the URL of the current browser window/tab is a certain string
 - `the( css)* attribute "([^"]*)?" from element "([^"]*)?" is( not)* "([^"]*)?"` <br>Check the value of a element's (css) attribute
 - `the cookie "([^"]*)?" contains( not)* the value "([^"]*)?"` <br>Check the value of a cookie
 - `the cookie "([^"]*)?" does( not)* exist` <br>Check the existence of a cookie
