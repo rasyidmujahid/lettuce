@@ -13,6 +13,18 @@ Boilerplate project to run WebdriverIO tests with [Cucumber](https://cucumber.io
 
 Although this project works fine with NPM we recommend to use Yarn (>= 1.0.0) instead,  due to its speed & solid dependency locking mechanism. To keep things simple we use yarn in this guide, but feel free to replace this with NPM if that is what you are using.
 
+- Headless chrome
+
+On linux setup 
+
+```sh
+$ curl -L -o google-chrome.deb https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
+$ sudo dpkg -i google-chrome.deb
+$ sudo sed -i 's|HERE/chrome\"|HERE/chrome\" --disable-setuid-sandbox|g' /opt/google/chrome/google-chrome
+$ rm google-chrome.deb
+
+```
+
 ## Quick start
 
 Choose one of the following options:
@@ -92,6 +104,21 @@ _please note_ The WDIO runner uses the configuration file `wdio.conf.js` by defa
 # Configurations
 
 To configure your tests, checkout the [`wdio.conf.js`](https://github.com/webdriverio/cucumber-boilerplate/blob/master/wdio.conf.js) file in your test directory. It comes with a bunch of documented options you can choose from.
+
+## Headless
+On windows:
+```js
+browserName: 'chrome',
+chromeOptions: {
+    args: ['--headless', '--disable-gpu', '--window-size=1280,800'],
+    binary: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+}
+```
+
+On linux, 
+```js
+binary: '/usr/bin/google-chrome'
+```
 
 ## Environment-specific configurations
 
