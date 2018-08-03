@@ -47,6 +47,10 @@ exports.config = {
         maxInstances: 5,
         //
         browserName: 'chrome',
+        chromeOptions: {
+            args: ['--headless', '--disable-gpu', '--window-size=1280,800'],
+            binary: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
+            }
     }],
     //
     // ===================
@@ -135,7 +139,7 @@ exports.config = {
         // <boolean> invoke formatters without executing steps
         // dryRun: false,
         // <boolean> abort the run on first failure
-        failFast: false,
+        failFast: true,
         // <boolean> Enable this config to treat undefined definitions as
         // warnings
         ignoreUndefinedDefinitions: false,
