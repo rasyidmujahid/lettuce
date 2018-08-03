@@ -50,7 +50,7 @@ exports.config = {
         chromeOptions: {
             args: ['--headless', '--disable-gpu', '--window-size=1280,800'],
             binary: 'C:\\Program Files (x86)\\Google\\Chrome\\Application\\chrome.exe'
-            }
+        }
     }],
     //
     // ===================
