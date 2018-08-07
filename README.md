@@ -13,6 +13,9 @@ Boilerplate project to run WebdriverIO tests with [Cucumber](https://cucumber.io
 
 Although this project works fine with NPM we recommend to use Yarn (>= 1.0.0) instead,  due to its speed & solid dependency locking mechanism. To keep things simple we use yarn in this guide, but feel free to replace this with NPM if that is what you are using.
 
+- Java JDK 8
+http://tipsonubuntu.com/2016/07/31/install-oracle-java-8-9-ubuntu-16-04-linux-mint-18/
+
 - Headless chrome
 
 On linux setup 
